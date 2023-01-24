@@ -20,7 +20,7 @@ header {
 nav a {
     margin-left: 20px;
 }
-/* .main svg */
+/* .main*/
 .main {
     background-color: #262626;
     position: relative;
@@ -48,6 +48,36 @@ svg {
     100% {
       fill: rgba(228,75,56,1); stroke: rgba(54,95,160,0); 
       stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+    }
+  }
+  .main .mouse_ani {
+    width: 22px;
+    height: 34px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.4);
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .main .mouse_ani::before {
+    content: "";
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.4);
+    animation: down 1s infinite alternate;
+  }
+  @keyframes down {
+    0% {
+        top:15%;
+    }
+    100% {
+        top: 50%;
     }
   }
 
