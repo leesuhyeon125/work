@@ -19,6 +19,7 @@ header {
 }
 nav a {
     margin-left: 20px;
+    font-size: 16px;
 }
 /* .main*/
 .main {
@@ -87,7 +88,9 @@ svg {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     place-content: space-around;
-    padding: 50px;
+    padding: 100px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 .about .container>div {
     justify-self: center;
@@ -114,9 +117,8 @@ svg {
     line-height: 3rem;
     color: #fff;
     bottom: 0;
-    
+    left: 0;
 }
-
 .about .container div:nth-child(4){
     grid-column: 3/4;
 }
@@ -154,33 +156,42 @@ svg {
 
 
 /*.project*/
+.project {
+    background-color: #E44B38;
+}
 .inner_box {
     padding: 100px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 .inner_box h2 {
     font-size: 40px;
 }
 .project_list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3rem 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(416px, 1fr));
+    grid-gap: 50px;
     padding-top: 50px;
 }
 .project_list li {
     width: 100%;
     overflow: hidden;
-    border-radius: 1rem;
+    border-radius: 6px;
     box-shadow: 4px 9px 9px 1px rgb(0 0 0 / 20%);
 }
 
 .project_list li .img_cover img {
     width: 100%;
-    object-fit: cover;
+    display: block;
+}
+.project_list li a .list_info {
+    background-color: #fafafa;
 }
 .project_list li a p {
     text-align: center;
     padding: 20px 0;
 }
+
 /*design*/
 
 .autoplay {
